@@ -2,23 +2,23 @@ version: "3"
 
 services:
   temp_sensor:
-    image: antonaleks/data-simulator
+    image: chirchil159/simulator
     environment:
-      - SIM_HOST=192.168.1.1
-      - SIM_NAME=TIRCAHL24
+      - SIM_HOST=192.168.13.1
+      - SIM_NAME=SIM_TEMP_01
       - SIM_PERIOD=5
       - SIM_TYPE=temperature
   pressure_sensor:
-    image: antonaleks/data-simulator
+    image: chirchil159/simulator
     environment:
-      - SIM_HOST=192.168.1.1
-        - SIM_NAME=PIRCAHL11
+      - SIM_HOST=192.168.13.1
+        - SIM_NAME=SIM_PRES_01
         - SIM_PERIOD=10
         - SIM_TYPE=pressure
   current_sensor:
-    image: antonaleks/data-simulator
+    image: chirchil159/simulator
     environment:
-      - SIM_HOST=192.168.1.1
-        - SIM_NAME=A0_CURRENT
+      - SIM_HOST=192.168.13.1
+        - SIM_NAME=SIM_CURRENT_01
         - SIM_PERIOD=1
         - SIM_TYPE=current
